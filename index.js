@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 function solve(filename) {
-    const data = JSON.parse(fs.readFileSync('testCase.json', 'utf8'));
+    const data = JSON.parse(fs.readFileSync(filename, 'utf8'));
     const { n, k } = data.keys;
     
     let points = [];
@@ -29,5 +29,5 @@ function solve(filename) {
     return Math.round(c);
 }
 
-console.log(solve('testcase1.json'));
-console.log(solve('testcase2.json'));
+console.log(solve('testCase.json'));
+console.log(solve('testCase2.json'));
